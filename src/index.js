@@ -415,10 +415,7 @@ export default class aTemplate {
       const html = this.getHtml(tem);
       const target = selector(`[data-id='${tem}']`);
       if (!target) {
-        const temElem = selector(query);
-        if(temElem){
-          temElem.insertAdjacentHTML('afterend', `<div data-id="${tem}"></div>`);
-        }
+        if(selector(query)){selector(query).insertAdjacentHTML('afterend', `<div data-id="${tem}"></div>`);}
         if (renderWay === 'text') {
           selector(`[data-id='${tem}']`).innerText = html;
         } else {

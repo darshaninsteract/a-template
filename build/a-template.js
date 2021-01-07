@@ -1226,7 +1226,7 @@ var aTemplate = function () {
         var html = _this5.getHtml(tem);
         var target = (0, _util.selector)('[data-id=\'' + tem + '\']');
         if (!target) {
-          (0, _util.selector)(query).insertAdjacentHTML('afterend', '<div data-id="' + tem + '"></div>');
+          if((0, _util.selector)(query)){(0, _util.selector)(query).insertAdjacentHTML('afterend', '<div data-id="' + tem + '"></div>');}
           if (renderWay === 'text') {
             (0, _util.selector)('[data-id=\'' + tem + '\']').innerText = html;
           } else {
